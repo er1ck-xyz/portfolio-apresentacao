@@ -1,0 +1,60 @@
+#texto-animado2 {
+    font-size: 34px;
+    font-weight: 700;
+    min-width: 280px;
+}
+
+#texto-animado2 span {
+    position: relative;
+    margin-left: 210px;
+}
+
+#texto-animado2 span::before {
+    content: "Tailwind";
+    color: var(--cor0);
+    animation: words2 20s infinite;
+}
+
+#texto-animado2 span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 15px);
+    height: 100%;
+    background-color: #191627;
+    border-left: 2px solid var(--cor0);
+    right: -15px;
+    animation: cursor2 .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor2 {
+    to {
+        border-left: 2px solid #191627;
+    }
+}
+
+@keyframes words2 {
+    0%,20% {
+        content: "Tailwind";
+    }
+    21%,40% {
+        content: "React";
+    }
+    41%,60% {
+        content: "TypeScript";
+    }
+    61%,80% {
+        content: "UI/UX";
+    }
+    81%,100% {
+        content: "PrimeNG";
+    }
+}
+
+@keyframes typing2 {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 15px);
+    }
+}

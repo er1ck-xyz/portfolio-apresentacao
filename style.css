@@ -1,0 +1,116 @@
+:root {
+    --cor0: rgb(0, 255, 128);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    background-color: #191627;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+    height: 931px;
+}
+
+/* Header fixo */
+header {
+    color: white;
+    height: 100px;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    width: 64%;
+    background-color: #191627;
+    z-index: 999;
+}
+
+/* links do header */
+div > a {
+    float: right;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: "Exo 2", sans-serif;
+    line-height: 10px;
+    color: white;
+}
+
+/* logo/nome */
+#meu-nome-logo {
+    font-family: "Orbitron", sans-serif;
+    padding-left: 35px;
+    padding-top: 35px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+/* sections */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 120px; /* segurança para ancoragem */
+}
+
+/* Home - compensar header fixo */
+#home {
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    margin-right: 40px;
+    display: inline-block;
+    padding-top: 290px; /* ajuste caso queira mais espaço */
+}
+
+/* Títulos do home */
+#home > h1 {
+    padding-left: 203px;
+    padding-bottom: 15px;
+    font-size: 2rem;
+    color: var(--cor0);
+}
+
+#home > h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-left: 135px;
+    padding-bottom: 15px;
+}
+
+#home > h3 {
+    font-size: 2.5rem;
+}
+
+/* espaçamentos das outras seções (mantidos) */
+#sobre { padding-top: 180px; }
+#resumo { padding-top: 180px; }
+#contato { padding-top: 180px; }
+
+
+/* ---------------------------- SPAN ANIMADO ---------------------------- */ 
+
+
+
+/* Fechamento do texto animado */

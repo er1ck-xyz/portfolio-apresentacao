@@ -1,0 +1,60 @@
+.texto-animado {
+    font-size: 34px;
+    font-weight: 700;
+    min-width: 280px;
+}
+
+.texto-animado span {
+    position: relative;
+    margin-left: 210px;
+}
+
+.texto-animado span::before {
+    content: "Tailwind";
+    color: var(--cor0);
+    animation: words 20s infinite;
+}
+
+.texto-animado span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 15px);
+    height: 100%;
+    background-color: #191627;
+    border-left: 2px solid var(--cor0);
+    right: -15px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #191627;
+    }
+}
+
+@keyframes words {
+    0%,20% {
+        content: "HTML";
+    }
+    21%,40% {
+        content: "CSS";
+    }
+    41%,60% {
+        content: "JavaScript";
+    }
+    61%,80% {
+        content: "PHP";
+    }
+    81%,100% {
+        content: "MySQL";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 15px);
+    }
+}
