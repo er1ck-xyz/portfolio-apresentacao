@@ -12,8 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 body {
     background-color: #191627;
     color: white;
@@ -44,6 +42,12 @@ header {
     width: 64%;
     background-color: #191627;
     z-index: 999;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between
 }
 
 /* links do header */
@@ -55,6 +59,7 @@ div > a {
     text-decoration: none;
     font-family: "Exo 2", sans-serif;
     line-height: 10px;
+    margin-top: 35px;
     color: white;
 }
 
@@ -65,6 +70,7 @@ div > a {
     padding-top: 35px;
     line-height: 30px;
     color: rgb(255, 255, 255);
+    cursor: default;
 }
 
 /* sections */
@@ -103,14 +109,63 @@ section {
     font-size: 2.5rem;
 }
 
-/* espaçamentos das outras seções (mantidos) */
-#sobre { padding-top: 180px; }
-#resumo { padding-top: 180px; }
-#contato { padding-top: 180px; }
+#sobre {
+    padding-top: 60px;
+    text-align: justify;
+    line-height: 1.8px;
+}
+
+#sobre p {
+    line-height: 30px;
+}
+
+#sobre span {
+    color: var(--cor0);
+}
+
+#sobre h1 {
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+#sobre ul {
+    line-height: 40px;
+}
+
+#sobre strong {
+    color: var(--cor0);
+}
+
+#resumo {
+    padding-top: 230;
+}
+
+#contato {
+    padding-top: 230px;
+}
 
 
-/* ---------------------------- SPAN ANIMADO ---------------------------- */ 
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 13px;
+    height: 0px; /* Para scroll horizontal também */
+}
 
+/* Fundo da barra */
+::-webkit-scrollbar-track {
+    background: #111; /* Cor de fundo da barra */
+    border-radius: 10px;
+}
 
+/* Parte que se move */
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 128); /* Cor verde */
+    border-radius: 10px;
+    border: 3px solid #111; /* Espaço entre o thumb e o track */
+    transition: background-color 0.3s;
+}
 
-/* Fechamento do texto animado */
+/* Efeito quando passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff80cc; /* Um verde mais transparente */
+}
