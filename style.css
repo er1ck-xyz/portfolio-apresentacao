@@ -1,171 +1,348 @@
 :root {
-    --cor0: rgb(0, 255, 128);
+  --cor0: rgb(0, 255, 128);
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #191627;
-    color: white;
-    font-family: "Exo 2", sans-serif;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #191627;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    width: 1140px;
-    margin: auto;
-    height: 931px;
+  width: 1140px;
+  margin: auto;
+  height: 931px;
 }
 
 /* Header fixo */
 header {
-    color: white;
-    height: 100px;
-    position: fixed;
-    width: 80%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 0;
-    width: 64%;
-    background-color: #191627;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between
+  color: white;
+  height: 100px; /* menor altura */
+  position: fixed;
+  width: 64%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0 10px;
+  background-color: #191627;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div > a {
+  margin-left: 35px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  color: white;
 }
 
 /* links do header */
 div > a {
-    float: right;
-    margin-left: 35px;
-    margin-right: 35px;
-    font-size: 1.8rem;
-    text-decoration: none;
-    font-family: "Exo 2", sans-serif;
-    line-height: 10px;
-    margin-top: 35px;
-    color: white;
+  float: right;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  line-height: 15px;
+  margin-top: 40px;
+  color: white;
+}
+
+a {
+  position: relative;
+  text-decoration: none; /* remove o sublinhado padrão */
+  color: #000;
+  font-size: 20px;
+  left: 40%;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* distância da linha em relação ao texto */
+  width: 0;
+  height: 2px;
+  background-color: var(--cor0);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* logo/nome */
 #meu-nome-logo {
-    font-family: "Orbitron", sans-serif;
-    padding-left: 35px;
-    padding-top: 35px;
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    cursor: default;
+  font-family: 'Orbitron', sans-serif;
+  padding-left: 35px;
+  padding-top: 35px;
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  cursor: default;
 }
 
 /* sections */
 section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    scroll-margin-top: 120px; /* segurança para ancoragem */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 120px; /* segurança para ancoragem */
 }
 
 /* Home - compensar header fixo */
 #home {
-    color: white;
-    font-family: "Exo 2", sans-serif;
-    margin-right: 40px;
-    display: inline-block;
-    padding-top: 290px; /* ajuste caso queira mais espaço */
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  margin-right: 40px;
+  display: inline-block;
+  padding-top: 290px; /* ajuste caso queira mais espaço */
 }
 
 /* Títulos do home */
 #home > h1 {
-    padding-left: 203px;
-    padding-bottom: 15px;
-    font-size: 2rem;
-    color: var(--cor0);
+  padding-left: 203px;
+  padding-bottom: 15px;
+  font-size: 2rem;
+  color: var(--cor0);
 }
 
 #home > h2 {
-    text-transform: uppercase;
-    font-size: 3rem;
-    padding-left: 135px;
-    padding-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-left: 135px;
+  padding-bottom: 15px;
 }
 
 #home > h3 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 #sobre {
-    padding-top: 60px;
-    text-align: justify;
-    line-height: 1.8px;
+  padding-top: 60px;
+  text-align: justify;
+  line-height: 1.8px;
 }
 
 #sobre p {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 #sobre span {
-    color: var(--cor0);
+  color: var(--cor0);
 }
 
 #sobre h1 {
-    font-size: 3rem;
-    padding-bottom: 50px;
+  font-size: 3rem;
+  padding-bottom: 50px;
 }
 
 #sobre ul {
-    line-height: 40px;
+  line-height: 40px;
 }
 
 #sobre strong {
-    color: var(--cor0);
+  color: var(--cor0);
 }
 
 #resumo {
-    padding-top: 230;
+  padding-top: 15px;
+}
+
+#resumo p {
+  line-height: 165%;
+  text-align: justify;
+  text-indent: 15px;
+}
+
+#resumo h1 {
+  margin-bottom: 2px;
+  font-size: 3rem;
+  color: var(--cor0);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-shadow:
+    0 0 2px #00ff80,
+    0 0 4px #00b45a,
+    0 0 6px #00ff80,
+    0 0 16px #00cc66;
+}
+
+#resumo strong {
+  color: var(--cor0);
 }
 
 #contato {
-    padding-top: 230px;
+  padding-top: 230px;
 }
 
+#resumos h1 {
+  margin-bottom: 2px;
+  font-size: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#resumos span {
+  margin-bottom: 2px;
+  font-size: 3rem;
+  color: var(--cor0);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-shadow:
+    0 0 2px #00ff80,
+    0 0 4px #00b45a,
+    0 0 6px #00ff80,
+    0 0 16px #00cc66;
+}
+
+.ce-logo {
+  margin-bottom: 2px;
+  font-size: 3rem;
+  color: var(--cor0);
+  margin: 0 auto;
+  margin-bottom: -20px;
+}
+
+.ce-image {
+  position: relative; /* fundamental para os pseudo-elementos */
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: visible; /* permite que o glow apareça fora da imagem */
+}
+
+.ce-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.ce-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 25px; /* imagem + tamanho do glow */
+  background: linear-gradient(
+    90deg,
+    #00ff80,
+    #00b45a,
+    #00ff80,
+    #66ff99,
+    #00ff80,
+    #009966,
+    #00ff80,
+    #00cc66
+  );
+  background-size: 200% 200%;
+  animation: borderMove 3s linear infinite;
+  filter: blur(15px); /* efeito glow */
+  opacity: 0.7;
+  z-index: -1; /* atrás da imagem */
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#resumos p {
+  margin-top: 40px;
+  text-align: justify;
+  line-height: 150%;
+}
+
+/* Seleciona a imagem da logo */
+.logo-cheatengine {
+  display: inline-block;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+/* Animação de flutuação */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px; /* bordas arredondadas */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.image-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
 
 /* Largura da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 13px;
-    height: 0px; /* Para scroll horizontal também */
+  width: 13px;
+  height: 0px; /* Para scroll horizontal também */
 }
 
 /* Fundo da barra */
 ::-webkit-scrollbar-track {
-    background: #111; /* Cor de fundo da barra */
-    border-radius: 10px;
+  background: #111; /* Cor de fundo da barra */
+  border-radius: 10px;
 }
 
 /* Parte que se move */
 ::-webkit-scrollbar-thumb {
-    background: rgb(0, 255, 128); /* Cor verde */
-    border-radius: 10px;
-    border: 3px solid #111; /* Espaço entre o thumb e o track */
-    transition: background-color 0.3s;
+  background: rgb(0, 255, 128); /* Cor verde */
+  border-radius: 10px;
+  border: 3px solid #111; /* Espaço entre o thumb e o track */
+  transition: background-color 0.3s;
 }
 
 /* Efeito quando passa o mouse */
 ::-webkit-scrollbar-thumb:hover {
-    background: #00ff80cc; /* Um verde mais transparente */
+  background: #00ff80cc; /* Um verde mais transparente */
 }
