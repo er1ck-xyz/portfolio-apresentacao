@@ -209,12 +209,13 @@ section {
   border-radius: 15px;
   margin: 2rem auto;
   overflow: visible;
+  /* Removido margin-left: 15%; para centralizar melhor */
   width: 90%;
   max-width: 400px;
 }
 
 .ce-image img {
-  width: 100%;
+  width: 100%; /* Ajustado para 100% */
   height: auto;
   border-radius: 15px;
   display: block;
@@ -225,8 +226,8 @@ section {
   position: absolute;
   top: -10px;
   left: -10px;
-  right: -10px;
-  bottom: -10px;
+  right: -10px; /* Alterado para -10px para ser responsivo */
+  bottom: -15px;
   border-radius: 25px;
   background: linear-gradient(
     90deg,
@@ -359,8 +360,15 @@ section {
     font-size: 5vw;
   }
 
+  /* Ajustes para a imagem em tablets */
   .ce-image {
-    max-width: 90%;
+    max-width: 80%; /* Ocupa um pouco mais de espaço */
+    margin-left: auto; /* Centraliza a imagem */
+    margin-right: auto;
+  }
+
+  .ce-image img {
+    width: 100%; /* Ajustado para 100% */
   }
 
   .image-container img {
@@ -375,12 +383,22 @@ section {
 
   header {
     flex-direction: column;
+    height: auto;
+    position: static; /* Ajuste: para de ser fixo em mobile */
+    transform: none;
+    width: 100%; /* Ajuste: ocupa toda a largura */
+    padding: 1rem; /* Ajuste: padding para os lados */
   }
 
+  header div {
+    flex-direction: column; /* Ajuste: links ficam um abaixo do outro */
+    margin-top: 1rem;
+  }
+
+  /* Ajuste: centraliza os títulos em mobile */
   #home > h1,
   #home > h2,
   #home > h3 {
-    padding-left: 0;
     text-align: center;
   }
 
@@ -391,7 +409,7 @@ section {
   }
 
   .ce-image {
-    margin-top: 1.5rem;
+    margin: 1.5rem auto; /* Centraliza a imagem */
   }
 }
 
