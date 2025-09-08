@@ -16,29 +16,31 @@ body {
   background-color: #191627;
   color: white;
   font-family: 'Exo 2', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .container {
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   margin: auto;
-  height: 931px;
+  min-height: 100vh;
 }
 
 /* Header fixo */
 header {
   color: white;
-  height: 100px; /* menor altura */
+  height: 80px;
   position: fixed;
-  width: 64%;
+  width: 90%;
+  max-width: 1140px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0;
-  padding: 0 10px;
+  padding: 0 1rem;
   background-color: #191627;
   z-index: 999;
   display: flex;
@@ -49,11 +51,12 @@ header {
 header div {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header div > a {
-  margin-left: 35px;
-  font-size: 1.8rem;
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
   color: white;
@@ -62,29 +65,27 @@ header div > a {
 /* links do header */
 div > a {
   float: right;
-  margin-left: 35px;
-  margin-right: 35px;
-  font-size: 1.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
-  font-family: 'Exo 2', sans-serif;
-  line-height: 15px;
-  margin-top: 40px;
+  line-height: 1.2;
+  margin-top: 0.5rem;
   color: white;
 }
 
 a {
   position: relative;
-  text-decoration: none; /* remove o sublinhado padrão */
+  text-decoration: none;
   color: #000;
-  font-size: 20px;
-  left: 40%;
+  font-size: 1.2rem;
 }
 
 a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -3px; /* distância da linha em relação ao texto */
+  bottom: -3px;
   width: 0;
   height: 2px;
   background-color: var(--cor0);
@@ -98,146 +99,123 @@ a:hover::after {
 /* logo/nome */
 #meu-nome-logo {
   font-family: 'Orbitron', sans-serif;
-  padding-left: 35px;
-  padding-top: 35px;
-  line-height: 30px;
+  padding-left: 1rem;
+  line-height: 1.5;
   color: rgb(255, 255, 255);
   cursor: default;
 }
 
 /* sections */
 section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  scroll-margin-top: 120px; /* segurança para ancoragem */
+  scroll-margin-top: 120px;
+  padding: 2rem 1rem;
 }
 
 /* Home - compensar header fixo */
 #home {
   color: white;
-  font-family: 'Exo 2', sans-serif;
-  margin-right: 40px;
+  margin-right: 0;
   display: inline-block;
-  padding-top: 290px; /* ajuste caso queira mais espaço */
+  padding-top: 15vh;
 }
 
 /* Títulos do home */
 #home > h1 {
-  padding-left: 203px;
-  padding-bottom: 15px;
   font-size: 2rem;
   color: var(--cor0);
+  padding-bottom: 1rem;
 }
 
 #home > h2 {
   text-transform: uppercase;
-  font-size: 3rem;
-  padding-left: 135px;
-  padding-bottom: 15px;
+  font-size: 3vw;
+  padding-bottom: 1rem;
 }
 
 #home > h3 {
-  font-size: 2.5rem;
+  font-size: 2.5vw;
 }
 
 #sobre {
-  padding-top: 60px;
+  padding-top: 3rem;
   text-align: justify;
-  line-height: 1.8px;
+  line-height: 1.6;
 }
 
 #sobre p {
-  line-height: 30px;
+  line-height: 1.8;
 }
 
-#sobre span {
-  color: var(--cor0);
-}
-
-#sobre h1 {
-  font-size: 3rem;
-  padding-bottom: 50px;
-}
-
-#sobre ul {
-  line-height: 40px;
-}
-
+#sobre span,
 #sobre strong {
   color: var(--cor0);
 }
 
+#sobre h1 {
+  font-size: 3vw;
+  padding-bottom: 2rem;
+}
+
+#sobre ul {
+  line-height: 2.2;
+}
+
 #resumo {
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 
 #resumo p {
-  line-height: 165%;
+  line-height: 1.65;
   text-align: justify;
-  text-indent: 15px;
+  text-indent: 1rem;
 }
 
 #resumo h1 {
-  margin-bottom: 2px;
-  font-size: 3rem;
+  font-size: 3vw;
   color: var(--cor0);
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 auto 2rem auto;
   text-shadow:
     0 0 2px #00ff80,
     0 0 4px #00b45a,
     0 0 6px #00ff80,
     0 0 16px #00cc66;
-}
-
-#resumo strong {
-  color: var(--cor0);
 }
 
 #contato {
-  padding-top: 230px;
-}
-
-#resumos h1 {
-  margin-bottom: 2px;
-  font-size: 3rem;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  padding-top: 15vh;
 }
 
 #resumos span {
-  margin-bottom: 2px;
-  font-size: 3rem;
-  color: var(--cor0);
-  margin: 0 auto;
-  margin-bottom: 30px;
-  text-shadow:
-    0 0 2px #00ff80,
-    0 0 4px #00b45a,
-    0 0 6px #00ff80,
-    0 0 16px #00cc66;
+  text-align: center;
 }
 
-.ce-logo {
-  margin-bottom: 2px;
+#resumos h1 {
   font-size: 3rem;
-  color: var(--cor0);
-  margin: 0 auto;
-  margin-bottom: -20px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#resumos li {
+  margin-left: 45px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .ce-image {
-  position: relative; /* fundamental para os pseudo-elementos */
+  position: relative;
   border-radius: 15px;
-  margin: 0 auto;
-  margin-top: 30px;
-  overflow: visible; /* permite que o glow apareça fora da imagem */
+  margin: 2rem auto;
+  overflow: visible;
+  width: 90%;
+  max-width: 400px;
 }
 
 .ce-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 15px;
   display: block;
 }
@@ -249,7 +227,7 @@ section {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  border-radius: 25px; /* imagem + tamanho do glow */
+  border-radius: 25px;
   background: linear-gradient(
     90deg,
     #00ff80,
@@ -263,9 +241,9 @@ section {
   );
   background-size: 200% 200%;
   animation: borderMove 3s linear infinite;
-  filter: blur(15px); /* efeito glow */
+  filter: blur(15px);
   opacity: 0.7;
-  z-index: -1; /* atrás da imagem */
+  z-index: -1;
 }
 
 @keyframes borderMove {
@@ -281,34 +259,43 @@ section {
 }
 
 #resumos p {
-  margin-top: 40px;
+  margin-top: 2rem;
   text-align: justify;
-  line-height: 150%;
+  line-height: 2rem;
 }
 
 /* Seleciona a imagem da logo */
 .logo-cheatengine {
   display: inline-block;
   animation: flutuar 3s ease-in-out infinite;
+  margin-bottom: -30px;
 }
 
-/* Animação de flutuação */
 @keyframes flutuar {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
   100% {
     transform: translateY(0);
   }
 }
 
+#resumos h2,
+#resumos h3,
+#resumos h4,
+#resumos h5,
+#resumos h6 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 .image-container {
   position: relative;
   display: inline-block;
-  border-radius: 15px; /* bordas arredondadas */
+  border-radius: 15px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -316,33 +303,118 @@ section {
 
 .image-container img {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   border-radius: 15px;
   transition: transform 0.3s ease;
 }
 
-/* Largura da barra de rolagem */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 13px;
-  height: 0px; /* Para scroll horizontal também */
+  width: 10px;
 }
 
-/* Fundo da barra */
 ::-webkit-scrollbar-track {
-  background: #111; /* Cor de fundo da barra */
+  background: #111;
   border-radius: 10px;
 }
 
-/* Parte que se move */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 255, 128); /* Cor verde */
+  background: rgb(0, 255, 128);
   border-radius: 10px;
-  border: 3px solid #111; /* Espaço entre o thumb e o track */
+  border: 3px solid #111;
   transition: background-color 0.3s;
 }
 
-/* Efeito quando passa o mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: #00ff80cc; /* Um verde mais transparente */
+  background: #00ff80cc;
+}
+
+/* Media Queries - Mobile & Tablet */
+@media (max-width: 1024px) {
+  header {
+    width: 95%;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  header div > a,
+  div > a {
+    margin: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #home > h2 {
+    font-size: 5vw;
+  }
+
+  #home > h3 {
+    font-size: 4vw;
+  }
+
+  #sobre h1,
+  #resumo h1 {
+    font-size: 5vw;
+  }
+
+  .ce-image {
+    max-width: 90%;
+  }
+
+  .image-container img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 12vh;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  #home > h1,
+  #home > h2,
+  #home > h3 {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #resumo p,
+  #sobre p {
+    text-align: justify;
+    font-size: 0.9rem;
+  }
+
+  .ce-image {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header div > a,
+  div > a {
+    font-size: 0.9rem;
+    margin: 0.3rem;
+  }
+
+  #home > h1 {
+    font-size: 4vw;
+  }
+
+  #home > h2 {
+    font-size: 6vw;
+  }
+
+  #home > h3 {
+    font-size: 5vw;
+  }
+
+  #resumo h1 {
+    font-size: 6vw;
+  }
 }

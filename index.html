@@ -38,6 +38,7 @@
                     <h3>Pretendo aprender em breve:</h3>
                     <span></span>
                 </div>
+                <img class="about-image" src="public/images/about2.png" alt="">
         </section>
 
         <section id="sobre" class="fadeup">
@@ -71,22 +72,44 @@
 
 <section id="resumos" class="fadeup">
   <h1>
-    <img src="public/images/CE.png" class="logo-cheatengine ce-logo" width="100px" height="100px" alt="">
+    <img src="public/images/CE.png" class="logo-cheatengine" width="100px" height="100px" alt="">
     Como o <span>cheat engine</span> funciona
   </h1>
   <p>O Cheat Engine é uma ferramenta de exploração de memória que permite ler, modificar e injetar valores em programas em execução, principalmente jogos. Ele funciona monitorando a memória do processo e oferecendo uma interface para que você localize variáveis específicas, como vida, dinheiro, experiência ou habilidades.</p>
-  <h1></h1>
-  
-  <div class="ce-image">
-    <img src="public/images/Understanding-the-Cheat-Engine-11.png" alt="Descrição da imagem do Cheat Engine">
-  </div>
+  <h2>1. Leitura de memória</h1>
+    <p>O Cheat Engine consegue acessar a RAM do processo que está rodando. Cada variável dentro de um programa ocupa um espaço específico na memória. Por exemplo, a quantidade de ouro em um jogo pode estar armazenada em um endereço de memória como 0x01F4A2C. O Cheat Engine permite ler esse endereço e descobrir o valor armazenado ali.</p>
+    <h3>2. Scan de valores</h3>
+    <p>Quando você quer encontrar uma variável específica, o Cheat Engine faz um scan de memória: ele percorre todos os endereços do processo em busca de valores que correspondam ao que você está procurando. Por exemplo, se você tem 100 moedas, ele vai procurar todos os endereços que contêm 100.</p>
+    <ul>
+        <li>Depois, se você gastar ou ganhar moedas, pode fazer outro scan com o novo valor (ex: 120).</li>
+        <li>A interseção dos resultados mostra o endereço correto, filtrando os outros.</li>
+    </ul>
+    <h4>3. Pointers e Offsets</h4>
+    <p>Muitas variáveis em jogos não ficam em endereços fixos. Elas mudam toda vez que o jogo é aberto. Por isso, é necessário entender ponteiros (pointers) e offsets:</p>
+    <ul>
+        <li><strong>Pointer: </strong>é um endereço que aponta para outro endereço, onde a variável real está.</li>
+        <li><strong>Offset: </strong>é o deslocamento dentro de uma estrutura de dados, usado para calcular o endereço final de uma variável dinâmica.</li>
+    </ul>
+    <h5>4. Injeção de código</h5>
+    <p>Além de alterar valores, o Cheat Engine permite injetar código Assembly diretamente no processo. Isso significa que você pode modificar a lógica do jogo: pular verificações, alterar comportamentos ou criar funções novas.</p>
+    <h6>5. Tabelas e scripts</h6>
+    <p>O Cheat Engine permite salvar suas descobertas em tabelas e escrever scripts Lua para automatizar modificações. Isso ajuda a aplicar cheats complexos sem refazer todo o processo de scan.</p>
+    <h6>6. Aprendizado de programação e lógica</h6>
+    <p>Mais do que apenas trapacear, o Cheat Engine é um excelente laboratório de aprendizado:</p>
+    <ul>
+        <li>Você entende como programas armazenam e manipulam dados.</li>
+        <li>Aprende conceitos de memória, ponteiros, estruturas e lógica de jogos.</li>
+        <li>É uma ponte para estudar Assembly e engenharia reversa, que são usados em segurança, desenvolvimento de software e até criação de cheats próprios.</li>
+    </ul>
+    <div class="ce-image">
+        <img src="public/images/Understanding-the-Cheat-Engine-11.png" alt="Descrição da imagem do Cheat Engine">
+    </div>
+
 </section>
 
-        <section id="contato" class="fadeup">
-            sessão de contato
-        </section>
-
-    </div>
+<section id="contato" class="fadeup">
+    sessão de contato
+</section>
 
 </body>
 </html>
